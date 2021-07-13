@@ -1,0 +1,37 @@
+body {
+    padding: 50px 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h1, section h2 {
+    margin-bottom: 5px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+td, th {
+    border: 1px solid #232528;
+    padding: 7px;
+}
+
+th.name {
+    width: 50%;
+}
+
+th.version {
+    width: 20%;
+}
+
+th.links {
+    width: 30%;
+}
