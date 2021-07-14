@@ -23,6 +23,11 @@ a {
     color: #D54C4C;
 }
 
+p {
+    line-height: 1.6;
+    opacity: .9;
+}
+
 .card {
     border-radius: 5px;
     background: #fff;
