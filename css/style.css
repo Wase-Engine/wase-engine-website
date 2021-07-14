@@ -15,7 +15,7 @@ body {
     width: 720px;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, th, td {
     color: #24292E;
 }
 
@@ -23,7 +23,7 @@ a {
     color: #D54C4C;
 }
 
-p {
+p, td {
     line-height: 1.6;
     opacity: .9;
 }
