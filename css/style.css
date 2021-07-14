@@ -3,10 +3,6 @@
     font-family: 'Rubik', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    color: #24292E;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -16,13 +12,21 @@ body {
 
 .container {
     margin: 0 auto;
-    width: 60%;
+    width: 720px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #24292E;
+}
+
+a {
+    color: #D54C4C;
 }
 
 .card {
     border-radius: 5px;
     background: #fff;
-    padding: 15px 20px;
+    padding: 30px;
     border-top: 3px solid #D54C4C;
 }
 
@@ -46,14 +50,8 @@ body {
     background: #F6F8FA;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
     .container {
         width: 90%;
-    }
-}
-
-@media screen and (max-width: 770px) {
-    #logo {
-        max-width: 90%;
     }
 }

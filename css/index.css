@@ -1,9 +1,13 @@
-section {
-    margin-bottom: 20px;
+.section {
+    margin-bottom: 35px;
 }
 
-section h1, section h2 {
+.section h1, .section h2 {
     margin-bottom: 5px;
+}
+
+.section p {
+    margin-top: 0;
 }
 
 .card p {
@@ -12,12 +16,16 @@ section h1, section h2 {
 
 table {
     border-collapse: collapse;
-    width: 70%;
+    width: 100%;
 }
 
 td, th {
     border: 1px solid #232528;
     padding: 7px;
+}
+
+th {
+    text-align: left;
 }
 
 th.name {
@@ -30,10 +38,4 @@ th.version {
 
 th.links {
     width: 30%;
-}
-
-@media screen and (max-width: 1200px) {
-    table {
-        width: 100%;
-    }
 }
