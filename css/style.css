@@ -1,12 +1,17 @@
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    color: #24292E;
+}
+
 body {
-    background: #232528;
+    margin: 0;
+    padding: 0;
+    background: #1D1D1B;
+    padding: 50px 0;
 }
 
 .container {
@@ -18,8 +23,37 @@ body {
     border-radius: 5px;
     background: #fff;
     padding: 15px 20px;
+    border-top: 3px solid #D54C4C;
 }
 
-.card.orange {
-    border-top: 3px solid #FFA400;
+.card h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#logo {
+    max-width: 70%;
+    margin-bottom: 50px;
+}
+
+.center {
+    text-align: center;
+}
+
+.code {
+    border-radius: 5px;
+    padding: 10px;
+    background: #F6F8FA;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #logo {
+        max-width: 90%;
+    }
 }
