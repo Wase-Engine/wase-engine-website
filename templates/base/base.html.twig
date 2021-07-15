@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %} - Wase Engine</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+
+        <!-- Styling -->
+        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
