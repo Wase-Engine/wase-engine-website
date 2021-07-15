@@ -47,6 +47,9 @@
                         <td><a href="{{ release.zipball_url }}">{{ release.name }}</a></td>
                     </tr>
                 {% endfor %}
+                {% if releases is empty %}
+                    <tr><td colspan="3">No builds available</td></tr>
+                {% endif %}
             </tbody>
         </table>
 
