@@ -12,14 +12,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Doorkeeper open
-        uses: patoroco/doorkeeper@master
-        with:
-          digitaloceanToken: ${{ secrets.DO_TOKEN }}
-          firewallName: "GitHubActions"
-          actionToDo: "add"
-          dryRun: false
-
       - name: Deploy to production
         uses: appleboy/ssh-action@master
         with:
@@ -27,11 +19,3 @@ jobs:
           host: ${{ secrets.IP }}
           password: ${{ secrets.PRIVATE_PASSWORD }}
           script: 'cd /var/www/wase-engine.com && ./deploy.sh'
-
-      - name: Doorkeeper close
-        uses: patoroco/doorkeeper@master
-        with:
-          digitaloceanToken: ${{ secrets.DO_TOKEN }}
-          firewallName: "GitHubActions"
-          actionToDo: "remove"
-          dryRun: false
