@@ -7,15 +7,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomeController extends AbstractController
+class BuildsController extends AbstractController
 {
-    #[Route('/', name: 'index')]
+    #[Route('/builds', name: 'builds')]
     public function index(): Response
     {
-        $releases = GithubHelper::getReleases();
-
-        return $this->render('index.html.twig', [
-            'releases' => array_splice($releases, 0, 2)
+        return $this->render('builds/index.html.twig', [
+            'releases' => GithubHelper::getReleases()
         ]);
     }
 }
