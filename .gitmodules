@@ -1,3 +1,4 @@
 [submodule "src/wase-engine-docs"]
 	path = src/wase-engine-docs
 	url = https://github.com/JelleVos1/wase-engine-docs.git
+	branch = production
