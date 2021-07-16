@@ -8,3 +8,29 @@
 ![Stars badge](https://img.shields.io/github/stars/JelleVos1/wase-engine-website?style=social)
 
 This repository contains the website source code for the [Wase Engine](https://github.com/JelleVos1/wase-engine) repository. 
+
+## Requirements
+- PHP 8.0 or higher
+- Composer
+- Symfony
+- Yarn
+- NPM
+
+## Setting up the website
+
+To run the website on your local environment you will need to create an .env file in the project root and add the following lines to it:
+```
+APP_ENV=dev
+APP_SECRET=
+```
+
+After this you will have to run the following commands:
+```
+composer install
+yarn
+yarn build
+git submodule init
+git submodule update
+```
+
+To start the server you can use `symfony server:start`
