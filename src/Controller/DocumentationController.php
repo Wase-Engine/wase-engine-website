@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Helper\DocsHelper;
+use App\Helper\DocumentationHelper;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,7 +20,7 @@ class DocumentationController extends AbstractController
     public function index(): Response
     {
         return $this->render('documentation/index.html.twig', [
-            'links' => DocsHelper::getFiles(array('..', 'src', 'wase-engine-docs'))
+            'links' => DocumentationHelper::getFiles()
         ]);
     }
 
@@ -32,7 +32,8 @@ class DocumentationController extends AbstractController
     public function show(string $slug): Response
     {
         return $this->render('documentation/show.html.twig', [
-            'title' => str_replace('-', ' ', $slug)
+            'title' => str_replace('-', ' ', $slug),
+            'content' => DocumentationHelper::getContent(array(DocumentationHelper::fileName($slug, DocumentationHelper::getFilesInFolder())))
         ]);
     }
 
@@ -44,8 +45,13 @@ class DocumentationController extends AbstractController
     #[Route('/documentation/{category}/{slug}', name: 'documentation.showInCategory')]
     public function showInCategory(string $category, string $slug): Response
     {
+        $categoryName = DocumentationHelper::fileName(ucfirst($category), DocumentationHelper::getFilesInFolder());
+        $fileName = DocumentationHelper::fileName($slug, DocumentationHelper::getFilesInFolder(array($categoryName)));
+        $content = DocumentationHelper::getContent(array($categoryName, $fileName));
+
         return $this->render('documentation/show.html.twig', [
-            'title' => str_replace('-', ' ', $slug)
+            'title' => str_replace('-', ' ', $slug),
+            'content' => $content
         ]);
     }
 }
