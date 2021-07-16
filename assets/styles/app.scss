@@ -48,10 +48,12 @@ p, td {
     text-align: center;
 }
 
-.code {
-    border-radius: 5px;
-    padding: 10px;
-    background: #F6F8FA;
+.content {
+    pre {
+        border-radius: 5px;
+        padding: 10px;
+        background: #F6F8FA;
+    }
 }
 
 table {
