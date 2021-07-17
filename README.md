@@ -31,6 +31,7 @@ yarn
 yarn build
 git submodule init
 git submodule update
+git submodule foreach git pull origin production
 ```
 
 To start the server you can use `symfony server:start`
