@@ -13,16 +13,16 @@
                 <th>Downloads</th>
             </thead>
             <tbody>
-                {% for release in releases %}
-                    <tr>
-                        <td>{{ release.name }}</td>
-                        <td>{{ release.published_at | date('d M Y, H:i:s') }}</td>
-                        <td><a href="{{ release.zipball_url }}">{{ release.name }}</a></td>
-                    </tr>
-                {% endfor %}
-                {% if releases is empty %}
-                    <tr><td colspan="3">No builds available</td></tr>
-                {% endif %}
+                <tr>
+                    <td>Wase Engine 1.0 source</td>
+                    <td>19-07-2021</td>
+                    <td><a href="https://github.com/Wase-Engine/wase-engine/archive/refs/tags/1.0.zip">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Wase Engine 1.0 pre-compiled</td>
+                    <td>19-07-2021</td>
+                    <td><a href="https://github.com/Wase-Engine/wase-engine/releases/download/1.0/wase-engine-v1.0-precompiled.zip">Download</a></td>
+                </tr>
             </tbody>
         </table>
 
