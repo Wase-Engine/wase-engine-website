@@ -11,8 +11,6 @@ class BuildsController extends AbstractController
     #[Route('/builds', name: 'builds')]
     public function index(): Response
     {
-        return $this->render('builds/index.html.twig', [
-            'releases' => null
-        ]);
+        return $this->render('builds/index.html.twig');
     }
 }
