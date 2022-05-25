@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GIT_TOKEN }}
 
       - name: Deploy to production
         uses: appleboy/ssh-action@master
@@ -18,4 +18,4 @@ jobs:
           username: root
           host: ${{ secrets.IP }}
           password: ${{ secrets.PRIVATE_PASSWORD }}
-          script: 'cd /var/www/wase-engine.com && ./deploy.sh'
+          script: 'cd /var/www/wase-engine && ./deploy.sh && ./deploy-docs.sh'
