@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.GIT_TOKEN }}
+          ssh-key: ${{ secrets.PRIVATE_KEY }}
 
       - name: Deploy to production
         uses: appleboy/ssh-action@master
